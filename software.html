@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Milena Markovich Portfolio</title>
+        <style>
+				@font-face {
+  					font-family: headings;
+  					src: url(Elianto-Regular.ttf);
+  					font-weight: 100;
+				}
+				@font-face {
+  					font-family: main_text;
+  					src: url(SpartanMB-Thin.ttf);
+  					font-weight: 100;
+				}
+    			body {
+        			background-image: url(spaceranger.gif);
+        			background-repeat: no-repeat;
+        			background-attachment: fixed;
+        			background-position: center;
+            		-webkit-background-size: cover;
+        			-moz-background-size:cover;
+        			-o-background-size:cover;
+        			background-size: cover;
+    			}
+    			#all-contents {
+       				max-width: 1000px;
+        			margin: auto;
+    			}
+
+    			/* navigation menu */
+    			nav {
+        			margin: 0 auto;
+					margine-bottom: 20px;
+        			display: flex;
+        			padding: 10px;
+    			}
+    			nav ul {
+        			list-style-image: none;
+        			color: white;
+        			font-family: main_text;
+        			text-align: center;
+    			}
+    			nav li {
+        			display: inline-block;
+        			padding: 10px;
+        			color: white;
+        			font-family: main_text;
+        			font-size: 23px;
+    			}
+    			nav a {
+        			text-decoration: none;
+        			color: white;
+         			font-family: main_text;
+       			
+    			}
+    			nav a:hover {
+        			text-decoration: none;
+        			color: white;
+        			font-weight: bold;
+            		font-family: main_text;
+
+    			}
+
+   			/* main container area beneath menu */
+    			main {
+        			display: flex;
+            		font-family: main_text;
+                	background-color: rgba(255, 255, 255, .15);
+            		backdrop-filter: blur(25px);
+            		border-radius:10%;
+
+    			}
+    			.content {
+        			flex: 1;
+        			padding: 15px;
+        			color: white;
+            		font-family: main_text;
+    			}
+    			a {
+        			width: 150px;
+        			color: white;
+        			text-align: center;
+        			text-decoration: none;
+          			font-family: main_text;
+    			}
+    			a:hover {
+        			width: 150px;
+        			color: white;
+        			font-weight: bold;
+        			text-align: center;
+           			font-family: main_text;
+	     			text-decoration: none;
+    			}
+    			.imgContainer{
+				    float: left;
+					flex: 50%;
+					margin-left: 41px;
+					margin-right: 41px;
+					margin-bottom: 10px;
+				}
+				.center {
+				  display: block;
+				  margin-left: auto;
+				  margin-right: auto;
+				  padding: 15px;
+				  width: 50%;
+				}
+				h2{
+        			flex: 1;
+        			padding: 15px;
+        			color: white;
+        			font-family: main_text;
+				}
+
+		</style>
+    </head>
+
+    <body>
+       <div id="all-contents">
+        <nav>
+            <ul>
+				<li>
+					<a href="home.html">Milena Markovich</a>
+				</li>
+				<li>
+					<a href="about.html"> About Me </a>
+				</li>
+				<li>
+					<a href="software.html"> Software Projects </a>
+				</li>
+				<li>
+					<a href="hardware.html"> Electrical Projects </a>
+				</li>
+				<li>
+					<a href="mech.html"> Design Projects </a>
+				</li>
+            </ul>
+        </nav>
+        <main>
+            <div class="content">
+            	
+            	<h2> Software Projects </h2>
+
+				<p><b>Youtube to MP3 Conversion Python Project (2021)</b></p>
+				<p>As someone who enjoys a lot of non-English music, I frequently found myself frustrated by the shortcomings of the Spotify database. I figured the only way I could add these songs to my playlists was by going through the tedious process of converting Youtube videos to MP3 files, and adding them to my Local Files Library. In order to automate this tedious process I wrote a Python script which prompts the user for a Youtube URL and target folder and downloads the MP3 file of the audio to the given folder.</p>
+                <p style="text-align:center;"><a href="https://github.com/milenamarkovich/YoutubeMP3Downloader.git">You can find the project Github Repository here!<br/><br/></a></p>
+                
+                <p><b>FireDrone Website (2020/2021)</b></p>
+				<p>Team project designing hardware module which relays necessary information for creation of IFR to BC Wildfire Services and detects fire using image processing via a user-friendly and comprehensive website. I am currently working on prototyping the UI design of this website with Figma (pictured below), in order to later build the platform using React and NodeJS.</p>
+				<img src="firedrone.jpg" alt="Current Home Screen Mockup for FireDrone Website" style="width:400px;height:200px;padding=20px;" class="center">
+				
+				<p><b>PlantStalk Android App (2020)</b></p>
+				<p>Term project integrating a sensor module assessing the soil moisture, temperature and light of garden plants. This information is displayed to users via an Android smartphone app. We developed our app using Android Studio - this included features such as notifications, bluetooth connection and data graphs.</p>
+				<p style="text-align:center;"><a href="https://github.com/milenamarkovich/PlantStalk.git">You can find our Github Repository here!<br/><br/></a></p>
+				<img src="PlantStalk Demo.gif" alt="PlantStalk Android App Demo" style="width:300px;height:500px;padding=20px;" class="center">
+					
+			</div>
+			
+        </main>
+        
+      </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script id="portfolioScript">$(document).ready(function() {$.getJSON('projects/projects.json').then(function(data) { data.projects.forEach(function(project){ $('#portfolio').append('<li><a href="projects/' + project.name + '/">' + project.title + ' : ' + project.description + '</a></li>'); }); }); });</script>
+    </body>
+</html>
