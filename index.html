@@ -20,6 +20,7 @@
     			body {
         			background-image: url(spaceranger.gif);
         			width: device-width;
+        			height: device-height;
         			background-repeat: no-repeat;
         			background-attachment: fixed;
         			background-position: center;
@@ -47,6 +48,7 @@
     			nav li {
         			float: left;
         			list-style-type: none;
+        			width: 100vw;
         		}
         		nav li a{            		
         			color: white;
@@ -61,7 +63,7 @@
     			.topnav a {
     				padding: 14px 16px;
         			text-decoration: none;
-        			font-size: 24px;
+        			font-size: 20px;
         			color: white;
          			font-family: main_text;
     			}
@@ -78,8 +80,9 @@
     			/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 				@media screen and (max-width: 600px) {
 				  .topnav a:not(:first-child) {display: none}
-				  .topnav a:first-child {background-color: rgb(24,2,12,.2); backdrop-filter: blur(25px)}
+				  .topnav a:first-child {background-color: rgb(24,2,12,.2); backdrop-filter: blur(25px); width: 50vw}
 				  .topnav a.icon {
+				  	right-margin: 0;
 				    float: right;
 				    display: block;
 				  }
@@ -94,7 +97,7 @@
 				    top: 0;
 				  }
 				  .topnav.responsive a.icon {
-				    float: right;
+				  	float: right;
 				    display: block;
 				    background-colour: none;
 				  }
@@ -103,14 +106,11 @@
 				    display: block;
 				    background-color: rgb(24,2,12,.2);
             		backdrop-filter: blur(25px);
-				    padding: 0;
-				    margin: 0;
-				    width: 25%;
 				    text-align: left;
         			text-decoration: none;
-        			font-size: 24px;
         			color: white;
          			font-family: main_text;
+         			width: 50vw;
 				  }
 				}
     			.creds{
@@ -135,11 +135,16 @@
     				font-family: headings;
     				text-decoration: none;
     				color: white;
-					font-size: 90px;
 					padding: 0px;
 					text-align: left;
 					display: flex;
-					width: device-width;
+					font-size: 70px;
+					margin-top: 20vh;
+    			}
+    			
+    			all-content.h1{
+    				width: device-width;
+    				height: 50vh;
     			}
 
 		</style>
@@ -168,10 +173,10 @@
 				}
 			</script>
       		<h1>
-				<p> Milena <br />Markovich <p>
+				<p> <b>M</b>ilena <b>M</b>arkovich <p>
 			</h1>
 			<main>
-				<div class="creds">
+				<div class="creds" style = "position: fixed; bottom-margin: 0">
 					<p>Background GIF credit to <a href="https://dribbble.com/PijWarren">PJ Warren</a></p>
 				</div>
 			</main>

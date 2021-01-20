@@ -20,6 +20,8 @@
 				
     			body {
         			background-image: url(spaceranger.gif);
+        			width: device-width;
+        			height: device-height;
         			background-repeat: no-repeat;
         			background-attachment: fixed;
         			background-position: center;
@@ -47,6 +49,7 @@
     			nav li {
         			float: left;
         			list-style-type: none;
+        			width: 100vw;
         		}
         		nav li a{            		
         			color: white;
@@ -61,7 +64,7 @@
     			.topnav a {
     				padding: 14px 16px;
         			text-decoration: none;
-        			font-size: 24px;
+        			font-size: 20px;
         			color: white;
          			font-family: main_text;
     			}
@@ -78,8 +81,9 @@
     			/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 				@media screen and (max-width: 600px) {
 				  .topnav a:not(:first-child) {display: none}
-				  .topnav a:first-child {background-color: rgb(24,2,12,.2); backdrop-filter: blur(25px)}
+				  .topnav a:first-child {background-color: rgb(24,2,12,.2); backdrop-filter: blur(25px); width: 50vw}
 				  .topnav a.icon {
+				  	right-margin: 0;
 				    float: right;
 				    display: block;
 				  }
@@ -94,7 +98,7 @@
 				    top: 0;
 				  }
 				  .topnav.responsive a.icon {
-				    float: right;
+				  	float: right;
 				    display: block;
 				    background-colour: none;
 				  }
@@ -103,14 +107,11 @@
 				    display: block;
 				    background-color: rgb(24,2,12,.2);
             		backdrop-filter: blur(25px);
-				    padding: 0;
-				    margin: 0;
-				    width: 25%;
 				    text-align: left;
         			text-decoration: none;
-        			font-size: 24px;
         			color: white;
          			font-family: main_text;
+         			width: 50vw;
 				  }
 				}
 
@@ -120,7 +121,11 @@
             		font-family: main_text;
                 	background-color: rgba(255, 255, 255, .15);
             		backdrop-filter: blur(25px);
-            		border-radius: 15px
+            		border-radius: 15px;
+            		width: 100vw;
+    			}
+    			main li {
+    				font-size: 16px;
     			}
     			.sidebar {
     				padding: 1vw;
@@ -131,7 +136,7 @@
     			}
     			main a {
         			width: 50vw;
-        			font-size: 18px;
+        			font-size: 16px;
         			color: white;
         			text-align: center;
         			text-decoration: none;
@@ -150,7 +155,8 @@
         			padding: 15px;
         			color: white;
             		font-family: main_text;
-            		font-size: 18px;
+            		font-size: 16px;
+            		width: 70vw;
     			}
     			h3 {
         			margin: 0px;
@@ -159,7 +165,7 @@
         			margin-bottom: 10px;
         			font-family: main_text;
         			letter-spacing: 2px;
-        			font-size: 24px;
+        			font-size: 20px;
     			}
 
 		</style>
@@ -203,7 +209,7 @@
 					</u1>
 				</div>
         
-				<div class="content">
+				<div class="content" style = "width: 50vw">
 					<p>Hi! My name is Milena, I'm an Integrated Engineering student at the University of British Columbia. In my studies I focus on <b>Mechanical and Computer engineering</b>, which allows me to combine my passions for aerostructure engineering and computer programming.</p>
 
 					<p>I am driven by a passion for learning, which is why I have continued growing my skills by joining design teams, such as UBC Rocket and UBC Mars Colony, and working on team projects. One such project integrated a sensor module assessing the soil moisture, temperature and light of garden plants while notifying users of extreneours conditions via an Android app. I lead the development of the app in Android Studio, teaching myself and the team how to work with Java and use object oriented programming concepts.</p>
